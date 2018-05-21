@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ViewsDemo.Models.Picture>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Picture\Index</h2>
+
+<a href="~/picture/create">Create New</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Url</th>
+            <th>Id</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var picture in this.Model)
+        {
+        <tr>
+            <td>@picture.DisplayName</td>
+            <td>@picture.Url</td>
+            <td>@picture.Id</td>
+            <td>
+                @Html.ActionLink("Edit image", "Edit", new { id = picture.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = picture.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = picture.Id })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

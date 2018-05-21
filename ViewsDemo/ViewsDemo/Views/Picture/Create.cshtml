@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+
+<form action="/picture/create" method="post">
+    <label for="display-name">Name</label>
+    <input type="text" id="display-name" name="DisplayName" placeholder="type name here..." />
+    <br />
+    <label for="url">Url</label>
+    <input type="text" id="url" name="url" placeholder="type url here..." />
+
+    <input type="submit"  value="create new"/>
+</form>
+@*{
+    "DisplayName":"asdasdasda",
+    "url":"asdasd"
+}*@
